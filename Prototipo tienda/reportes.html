@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generación de Reportes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- CDN para gráficos -->
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header>
+        <nav class="navbar">
+            <!-- Logotipo -->
+            <div class="logo">
+                <img src="logo_tiendita.png" alt="Tiendita" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inventarios.html">Gestión de Inventarios</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="chat.html">Chat</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section class="report-generation">
+            <h1>Generación de Reportes</h1>
+            <form id="report-form">
+                <label for="report-type">Tipo de Reporte:</label>
+                <select id="report-type" name="report-type" required>
+                    <option value="inventarios">Inventarios</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="productos">Productos Más Vendidos</option>
+                </select>
+        
+                <label for="start-date">Fecha de Inicio:</label>
+                <input type="date" id="start-date" name="start-date" required>
+        
+                <label for="end-date">Fecha de Fin:</label>
+                <input type="date" id="end-date" name="end-date" required>
+        
+                <button type="submit">Generar Reporte</button>
+            </form>
+            <p id="report-message" class="success-message" style="display: none;"></p>
+        </section>
+        
+        <section class="report-preview">
+            <h2>Vista Previa del Reporte</h2>
+            <canvas id="report-chart"></canvas>
+            <button id="download-report">Descargar Reporte (PDF)</button>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

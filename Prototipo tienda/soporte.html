@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header>
+        <nav class="navbar">
+            <!-- Logotipo -->
+            <div class="logo">
+                <img src="logo_tiendita.png" alt="Tiendita" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inventarios.html">Gestión de Inventarios</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="chat.html">Chat</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section class="faq">
+            <h1>Preguntas Frecuentes (FAQ)</h1>
+            <div class="question">
+                <h3>¿Cómo puedo registrar un producto?</h3>
+                <p>En la sección de Gestión de Inventarios, selecciona "Registro de Productos" y completa el formulario con los datos del producto.</p>
+            </div>
+            <div class="question">
+                <h3>¿Cómo puedo generar un reporte?</h3>
+                <p>En la sección de Reportes, selecciona el tipo de reporte, define las fechas y haz clic en "Generar Reporte".</p>
+            </div>
+            <div class="question">
+                <h3>¿Puedo cambiar la contraseña?</h3>
+                <p>En la sección de Configuración, utiliza el formulario de cambio de contraseña para actualizar tus credenciales.</p>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Formulario de Contacto</h2>
+            <form id="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

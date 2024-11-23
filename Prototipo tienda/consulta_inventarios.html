@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Inventarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header>
+        <nav class="navbar">
+            <!-- Logotipo -->
+            <div class="logo">
+                <img src="logo_tiendita.png" alt="Tiendita" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inventarios.html">Gestión de Inventarios</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="chat.html">Chat</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section class="inventory-search">
+            <h1>Consulta de Inventarios</h1>
+            <div>
+                <label for="search-input">Buscar Producto:</label>
+                <input type="text" id="search-input" placeholder="Nombre o Código del Producto">
+                <button onclick="filterInventory()">Buscar</button>
+            </div>
+            <p id="no-results" class="no-results" style="display: none;">No se encontraron resultados.</p>
+        </section>
+        
+        <section class="inventory-table">
+            <h2>Inventario</h2>
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Código</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Alerta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto A</td>
+                        <td>001</td>
+                        <td>10</td>
+                        <td>$100.00</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Producto B</td>
+                        <td>002</td>
+                        <td>3</td>
+                        <td>$50.00</td>
+                        <td>¡Sí!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

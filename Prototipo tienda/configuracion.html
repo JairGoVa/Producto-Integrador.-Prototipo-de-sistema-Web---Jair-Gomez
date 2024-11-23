@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header>
+        <nav class="navbar">
+            <!-- Logotipo -->
+            <div class="logo">
+                <img src="logo_tiendita.png" alt="Tiendita" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inventarios.html">Gestión de Inventarios</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="chat.html">Chat</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section class="settings">
+            <h1>Configuración</h1>
+
+            <!-- Configuración de Contraseña -->
+            <div class="password-settings">
+                <h2>Cambiar Contraseña</h2>
+                <form id="password-form">
+                    <label for="current-password">Contraseña Actual:</label>
+                    <input type="password" id="current-password" name="current-password" required>
+
+                    <label for="new-password">Nueva Contraseña:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+
+                    <label for="confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+
+                    <button type="submit">Guardar Cambios</button>
+                </form>
+            </div>
+
+            <!-- Configuración de Alertas -->
+            <div class="alert-settings">
+                <h2>Configuración de Alertas</h2>
+                <form id="alert-form">
+                    <label for="min-stock">Nivel Mínimo de Inventario:</label>
+                    <input type="number" id="min-stock" name="min-stock" min="1" required>
+
+                    <label for="email-alerts">Recibir Alertas por Correo:</label>
+                    <input type="checkbox" id="email-alerts" name="email-alerts">
+
+                    <button type="submit">Guardar Configuración</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
